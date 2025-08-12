@@ -1,0 +1,20 @@
+# Update core profile preferences
+[profile]
+# Get you SSO Start URL from AWS Portal
+sso_start_url = https://<YOUR-DOMANI>.awsapps.com/start#/
+region = eu-west-1
+sso_region = eu-west-1
+output = json
+
+# WARNING
+# configparser is case insensitive 
+# Everything will be lower case regardless
+[account-mappings]
+# remove any spaces in account name
+canonicalaccount = friendl_name
+account2 = friendly2
+
+[role-mappings]
+longprofile = friendlyprofile
+ViewOnlyAccess = ro
+AdministratorAccess = admin
