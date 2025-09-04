@@ -9,6 +9,8 @@ Builds multi-profile configuration file after reading [Identity Centre's Access 
 
 Copy the distributed awssso.cfg-dist example, to awssso.cfg, and modify as required to your environment. The \[Profile\] block is required, the \*-mappings sections provide quality of life capabilities, as detailed below.
 
+Different config file can be provided with the --configfile parameter
+
 ### Profile
 
 *Region* and *sso_region* should be self explanatory, and dependent on your use-case. 
