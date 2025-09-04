@@ -1,6 +1,7 @@
 #!/bin/python3
 
 import boto3
+import click
 import configparser
 import glob
 import json
@@ -66,9 +67,12 @@ def build_profile_block(conf, account, role):
     pass
 
 
-def main():
+@click.command()
+@click.option("--configfile", default="awssso.cfg", help="Path to configuration file")
+def main(configfile):
+
     config = configparser.ConfigParser()
-    config.read("awssso.cfg")
+    config.read(configfile)
 
     # extract token from sso cache
     token = get_sso_token()
