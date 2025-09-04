@@ -8,6 +8,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from pprint import pprint
 
 
 # No idea why SSO can't leverage standard --profile from config
@@ -30,6 +31,9 @@ def cleanse_account_name(account_name, account_mappings):
     if account_name in account_mappings:
         # If the account name exists in the mappings, replace it with the friendly name
         account_name = account_mappings[account_name]
+
+    if "profileprefix" in account_mappings:
+        account_name = account_mappings["profileprefix"] + account_name
     return account_name
 
 

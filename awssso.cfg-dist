@@ -10,6 +10,9 @@ output = json
 # configparser is case insensitive 
 # Everything will be lower case regardless
 [account-mappings]
+# If prefix is required for profile name, uncomment next line
+# ProfilePrefix = prefix-
+
 # remove any spaces in account name
 canonicalaccount = friendl_name
 account2 = friendly2
