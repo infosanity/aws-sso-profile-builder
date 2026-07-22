@@ -2,3 +2,6 @@ awssso.sh
 aws-sso.sh
 awssso.cfg
 output.cfg
+awssso.backup
+__pycache__/
+config.out
